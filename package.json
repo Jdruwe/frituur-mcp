@@ -12,6 +12,8 @@
 		"type-check": "tsc --noEmit"
 	},
 	"dependencies": {
+		"@cloudflare/playwright": "^1.1.1",
+		"@modelcontextprotocol/sdk": "^1.26.0",
 		"agents": "^0.5.0",
 		"zod": "^4.3.6"
 	},
