@@ -5,8 +5,7 @@ import {AgentContext} from "agents";
 import {env} from "cloudflare:workers";
 import {launch} from "@cloudflare/playwright";
 
-// Define our MCP agent with tools
-export class MyMCP extends McpAgent {
+export class FrituurMCP extends McpAgent {
 	readonly server: McpServer
 
 	constructor(ctx: AgentContext, env: Cloudflare.Env) {
@@ -104,7 +103,7 @@ export default {
 		const url = new URL(request.url);
 
 		if (url.pathname === "/mcp") {
-			return MyMCP.serve("/mcp").fetch(request, env, ctx);
+			return FrituurMCP.serve("/mcp").fetch(request, env, ctx);
 		}
 
 		return new Response("Not found", {status: 404});
